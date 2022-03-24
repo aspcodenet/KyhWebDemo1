@@ -1,0 +1,43 @@
+﻿@page 
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{
+    var namn = "Stefan";
+    var cool = false;
+    if (namn == "Stefan")
+        cool = true;
+
+}
+
+@if (cool)
+{
+    <div>HEJJKLDJ</div>
+}
+
+<h1>@Model.Namn</h1>
+
+
+<table class="table">
+    <tr>
+        <th>Namn</th>
+        <th>Jersey</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var player in Model.Players)
+    {
+        <tr>
+            <td>@player.Namn</td>
+            <td>@player.Jersey</td>
+            <td>Länk till @player.Id</td>
+        </tr>
+    }
+</table>
+
+
+
+
+<p>Use this page to detail your site's privacy policy.</p>
